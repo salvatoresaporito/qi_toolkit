@@ -11,10 +11,10 @@ def ensure_directory(directory: str):
 
 def get_dividend_history(ticker: str):
     """Download and save the dividend history for a given ticker."""
-    output_dir = 'div23'
+    output_dir = '../datasets/dividends_10y'
     ensure_directory(output_dir)
     
-    output_path = os.path.join(output_dir, f'../datasets/dividends_10y/{ticker}.csv')
+    output_path = os.path.join(output_dir, f'{ticker}.csv')
     if os.path.exists(output_path):
         return
 
